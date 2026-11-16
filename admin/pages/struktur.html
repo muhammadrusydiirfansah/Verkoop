@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Struktur Organisasi | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/struktur.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN STRUKTUR ORGANISASI -->
+            <section class="struktur-content">
+
+                <div class="page-title">
+                    <h2>Kelola Struktur Organisasi</h2>
+                    <p>Kelola data anggota dan jabatan struktur organisasi Verkoop.</p>
+                </div>
+
+                <!-- TOOLBAR -->
+                <div class="toolbar">
+
+                    <div class="search-box">
+                        <i class="bi bi-search"></i>
+                        <input type="text" id="cariAnggota" placeholder="Cari Anggota">
+                    </div>
+
+                    <button type="button" class="btn-tambah">
+                        <i class="bi bi-plus-lg"></i>
+                        <span>Tambah Anggota</span>
+                    </button>
+
+                </div>
+
+                <!-- TABEL ANGGOTA -->
+                <div class="table-card">
+
+                    <table class="struktur-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nama Anggota</th>
+                                <th>Jabatan</th>
+                                <th>Deskripsi</th>
+                                <th>Tombol Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Nama Anggota 1</td>
+                                <td>Ketua</td>
+                                <td>Penanggung jawab utama Verkoop.</td>
+                                <td>
+                                    <div class="aksi-group">
+                                        <button type="button" class="btn-aksi edit">
+                                            <i class="bi bi-pencil-square"></i> Edit
+                                        </button>
+                                        <button type="button" class="btn-aksi hapus">
+                                            <i class="bi bi-trash"></i> Hapus
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Nama Anggota 2</td>
+                                <td>Wakil Ketua</td>
+                                <td>Membantu ketua dalam pengelolaan Verkoop.</td>
+                                <td>
+                                    <div class="aksi-group">
+                                        <button type="button" class="btn-aksi edit">
+                                            <i class="bi bi-pencil-square"></i> Edit
+                                        </button>
+                                        <button type="button" class="btn-aksi hapus">
+                                            <i class="bi bi-trash"></i> Hapus
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Nama Anggota 3</td>
+                                <td>Bendahara</td>
+                                <td>Mengelola keuangan dan laporan penjualan.</td>
+                                <td>
+                                    <div class="aksi-group">
+                                        <button type="button" class="btn-aksi edit">
+                                            <i class="bi bi-pencil-square"></i> Edit
+                                        </button>
+                                        <button type="button" class="btn-aksi hapus">
+                                            <i class="bi bi-trash"></i> Hapus
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

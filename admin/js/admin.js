@@ -1,16 +1,21 @@
+// Tentukan path dasar: kalau halaman ada di folder /pages/, mundur satu folder
+const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
 
 // Memuat komponen HTML
 async function loadComponent(elementId, filePath) {
     const container = document.getElementById(elementId);
 
     try {
-        const response = await fetch(filePath);
+        const response = await fetch(basePath + filePath);
 
         if (!response.ok) {
-            throw new Error("Komponen tidak ditemukan: " + filePath);
+            throw new Error("Komponen tidak ditemukan: " + basePath + filePath);
         }
 
         container.innerHTML = await response.text();
+
+        // Sesuaikan link dan gambar di dalam komponen dengan lokasi halaman
+        fixRelativePaths(container);
 
     } catch (error) {
         console.error(error);
@@ -18,7 +23,30 @@ async function loadComponent(elementId, filePath) {
     }
 }
 
-// Memuat sidebar, header, dan footer
+// Tambahkan basePath ke href/src relatif di dalam komponen
+function fixRelativePaths(container) {
+    if (!basePath) return;
+
+    const isRelative = (url) =>
+        url &&
+        !url.startsWith("http") &&
+        !url.startsWith("/") &&
+        !url.startsWith("#") &&
+        !url.startsWith("mailto:") &&
+        !url.startsWith("data:");
+
+    container.querySelectorAll("a[href]").forEach((a) => {
+        const href = a.getAttribute("href");
+        if (isRelative(href)) a.setAttribute("href", basePath + href);
+    });
+
+    container.querySelectorAll("img[src]").forEach((img) => {
+        const src = img.getAttribute("src");
+        if (isRelative(src)) img.setAttribute("src", basePath + src);
+    });
+}
+
+// Memuat sidebar dan header
 async function loadAdminLayout() {
     await Promise.all([
         loadComponent("sidebar-container", "components/sidebar.html"),
