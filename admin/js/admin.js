@@ -1,5 +1,12 @@
-// Tentukan path dasar: kalau halaman ada di folder /pages/, mundur satu folder
-const basePath = window.location.pathname.includes("/pages/") ? "../" : "";
+const path = window.location.pathname;
+let basePath = "";
+
+if (path.includes("/pages/")) {
+    // contoh: pages/produk.html -> 0 subfolder, pages/struktur/index.html -> 1 subfolder
+    const afterPages = path.split("/pages/")[1];
+    const subfolderDepth = afterPages.split("/").length - 1;
+    basePath = "../".repeat(subfolderDepth + 1);
+}
 
 // Memuat komponen HTML
 async function loadComponent(elementId, filePath) {
