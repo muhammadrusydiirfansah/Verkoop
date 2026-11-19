@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Banner | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/banner/index.css">
+</head>
+
+<body data-page-title="Kelola Banner" data-active-menu="banner.html">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN KELOLA BANNER -->
+            <section class="banner-content">
+
+                <div class="banner-toolbar">
+                    <input type="text" id="searchInput" class="banner-search"
+                        placeholder="Cari Banner" aria-label="Cari nama banner">
+
+                    <a href="tambah-banner.html" class="btn-banner btn-banner-light">
+                        <i class="bi bi-plus-square"></i>
+                        Tambah Banner
+                    </a>
+                </div>
+
+                <div class="banner-table-wrap">
+                    <table class="banner-table">
+                        <thead>
+                            <tr>
+                                <th class="col-id">ID</th>
+                                <th>Gambar Banner</th>
+                                <th>Nama Banner</th>
+                                <th>Urutan</th>
+                                <th>Tombol Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bannerTableBody">
+                            <!-- Diisi oleh js/banner.js -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../js/admin.js"></script>
+    
+</body>
+</html>

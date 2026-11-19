@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Pengguna | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/pengguna/index.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN KELOLA PENGGUNA -->
+            <section class="user-content">
+
+                <!-- ========== 1. DAFTAR PENGGUNA ========== -->
+                <div class="user-view is-active" id="view-list">
+
+                    <div class="user-toolbar">
+                        <input type="text" id="searchInput" class="user-search"
+                            placeholder="Cari Nama" aria-label="Cari nama pengguna">
+
+                        <button type="button" class="btn-user btn-user-light" id="btnTambah">
+                            <i class="bi bi-person-plus"></i>
+                            Tambah Pengguna
+                        </button>
+                    </div>
+
+                    <div class="user-table-wrap">
+                        <table class="user-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-id">ID</th>
+                                    <th>Nama</th>
+                                    <th>Role</th>
+                                    <th>Jabatan</th>
+                                    <th>Tombol Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userTableBody">
+                                <!-- Diisi oleh js/user.js -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- ========== 2. TAMBAH PENGGUNA ========== -->
+                <div class="user-view" id="view-add">
+
+                    <div class="user-form-card">
+                        <h3>Form Pendaftaran Pengguna Baru</h3>
+
+                        <form id="formTambah">
+                            <div class="form-field">
+                                <label for="addNama">Nama Pengguna</label>
+                                <input type="text" id="addNama" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="addRole">Role</label>
+                                <input type="text" id="addRole" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="addJabatan">Jabatan</label>
+                                <input type="text" id="addJabatan" required>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-user btn-user-dark" data-batal>Batal</button>
+                                <button type="submit" class="btn-user btn-user-dark">Simpan Pengguna</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- ========== 3. EDIT PENGGUNA ========== -->
+                <div class="user-view" id="view-edit">
+
+                    <div class="user-form-card">
+                        <h3>Perbarui Data Pengguna</h3>
+
+                        <form id="formEdit">
+                            <div class="form-field">
+                                <label for="editNama">Nama Pengguna</label>
+                                <input type="text" id="editNama" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="editRole">Role</label>
+                                <input type="text" id="editRole" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="editJabatan">Jabatan</label>
+                                <input type="text" id="editJabatan" required>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="button" class="btn-user btn-user-dark" data-batal>Batal</button>
+                                <button type="submit" class="btn-user btn-user-dark">Perbarui Pengguna</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../js/admin.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Informasi | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/index.css">
+</head>
+
+<body data-page-title="Kelola Informasi" data-active-menu="informasi.html">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN KELOLA INFORMASI -->
+            <section class="informasi-content">
+
+                <div class="informasi-toolbar">
+                    <a href="tambah-informasi.html" class="btn-informasi btn-informasi-light">
+                        <i class="bi bi-plus-square"></i>
+                        Tambah Informasi
+                    </a>
+                </div>
+
+                <div class="informasi-table-wrap">
+                    <table class="informasi-table">
+                        <thead>
+                            <tr>
+                                <th class="col-id">ID</th>
+                                <th>Informasi Tentang Kami</th>
+                                <th class="col-aksi">Tombol Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="informasiTableBody">
+                            <!-- Diisi oleh js/informasi.js -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../js/admin.js"></script>
+   
+
+</body>
+</html>

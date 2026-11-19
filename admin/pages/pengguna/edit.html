@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Pengguna | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/pengguna/edit.css">
+</head>
+
+<body data-page-title="Edit Pengguna" data-active-menu="user.html">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN EDIT PENGGUNA -->
+            <section class="user-content">
+
+                <div class="user-form-card">
+                    <h3>Perbarui Data Pengguna</h3>
+
+                    <form id="formEdit">
+                        <div class="form-field">
+                            <label for="nama">Nama Pengguna</label>
+                            <input type="text" id="nama" name="nama" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="role">Role</label>
+                            <input type="text" id="role" name="role" required>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="jabatan">Jabatan</label>
+                            <input type="text" id="jabatan" name="jabatan" required>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="user.html" class="btn-user btn-user-dark">Batal</a>
+                            <button type="submit" class="btn-user btn-user-dark">Perbarui Pengguna</button>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../js/admin.js"></script>
+    
+
+</body>
+</html>

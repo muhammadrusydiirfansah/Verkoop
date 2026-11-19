@@ -1,0 +1,141 @@
+/* =========================================================
+   informasi.css - Style halaman Kelola Informasi (daftar)
+   Dipakai bersama css/admin.css (layout, sidebar, header)
+   ========================================================= */
+
+:root {
+    --informasi-dark: #333333;
+    --informasi-gray: #d9d9d9;
+    --informasi-text: #222222;
+    --informasi-border: #333333;
+}
+
+/* ===== WADAH KONTEN ===== */
+.informasi-content {
+    flex: 1;
+    background: #ffffff;
+    color: var(--informasi-text);
+    padding: 100px 32px;
+    overflow: auto;
+}
+
+/* ===== TOOLBAR (tombol tambah) ===== */
+.informasi-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+/* ===== TOMBOL ===== */
+.btn-informasi {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-informasi:hover {
+    opacity: 0.85;
+}
+
+.btn-informasi-light {
+    background: var(--informasi-gray);
+    color: var(--informasi-text);
+    border-radius: 4px;
+}
+
+/* ===== TABEL ===== */
+.informasi-table-wrap {
+    background: var(--informasi-gray);
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 420px;
+}
+
+.informasi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.informasi-table th,
+.informasi-table td {
+    padding: 14px 12px;
+    text-align: center;
+    border-right: 1px solid var(--informasi-border);
+}
+
+.informasi-table th:last-child,
+.informasi-table td:last-child {
+    border-right: none;
+}
+
+.informasi-table thead th {
+    font-weight: normal;
+    border-bottom: 1px solid var(--informasi-border);
+}
+
+.informasi-table tbody td {
+    height: 56px;
+    vertical-align: middle;
+}
+
+.informasi-table .col-id {
+    width: 6%;
+}
+
+.informasi-table .col-aksi {
+    width: 22%;
+}
+
+/* Kolom isi informasi rata kiri dan dipotong bila terlalu panjang */
+.informasi-table td.isi {
+    text-align: left;
+    line-height: 1.5;
+}
+
+.informasi-table .empty-state {
+    text-align: center;
+    color: #666666;
+    border-right: none;
+}
+
+/* Tombol Edit / Hapus di dalam tabel */
+.aksi-group {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.aksi-group a,
+.aksi-group button {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: var(--informasi-text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aksi-group a:hover,
+.aksi-group button:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 768px) {
+    .informasi-content {
+        padding: 20px 16px;
+    }
+
+    .informasi-table-wrap {
+        overflow-x: auto;
+    }
+}

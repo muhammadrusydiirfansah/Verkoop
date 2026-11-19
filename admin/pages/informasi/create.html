@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tambah Informasi | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../../css/create.css">
+</head>
+
+<body data-page-title="Tambah Informasi" data-active-menu="informasi.html">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN TAMBAH INFORMASI -->
+            <section class="informasi-content">
+
+                <div class="informasi-form-card">
+                    <h3>Form Penambahan Informasi Baru</h3>
+
+                    <form id="formTambah">
+                        <div class="form-field">
+                            <label for="isi">Informasi Tentang Kami</label>
+                            <textarea id="isi" name="isi" rows="8" required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <a href="informasi.html" class="btn-informasi btn-informasi-dark">Batal</a>
+                            <button type="submit" class="btn-informasi btn-informasi-dark">Simpan Informasi</button>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../../js/admin.js"></script>
+    
+
+</body>
+</html>
