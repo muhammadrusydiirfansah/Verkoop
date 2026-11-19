@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Struktur Organisasi | Verkoop</title>
+  <link rel="stylesheet" href="tambah.css">
+</head>
+<body>
+  <div class="layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+      <div class="brand">
+        <!-- Ganti src dengan path logo kamu -->
+        <img src="../../assets/logo.png" alt="Logo Verkoop" class="brand-logo">
+        <div class="brand-text">
+          <strong>VERKOOP</strong>
+          <small>KANTIN JURUSAN KESEHATAN</small>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="../../index.html" class="menu-item">Dashboard Admin</a>
+        <a href="../pengguna/index.html" class="menu-item">Kelola Pengguna</a>
+        <a href="../banner/index.html" class="menu-item">Kelola Banner</a>
+        <a href="../tentang/index.html" class="menu-item">Kelola Tentang</a>
+        <a href="index.html" class="menu-item active">Kelola Struktur Organisasi</a>
+        <a href="../penjaga/index.html" class="menu-item">Kelola Jadwal Penjaga</a>
+        <a href="../produk/index.html" class="menu-item">Kelola Produk</a>
+        <a href="../mitra/index.html" class="menu-item">Kelola Mitra</a>
+        <a href="../penitipan/index.html" class="menu-item">Kelola Alur Penitipan</a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="avatar">A</div>
+        <div class="user-info">
+          <strong>Nama Admin</strong>
+          <small>admin@verkoop.com</small>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ================= KONTEN ================= -->
+    <div class="main">
+      <header class="topbar">
+        <h1>Tambah Struktur Organisasi</h1>
+      </header>
+
+      <main class="content">
+        <form class="form-card" id="formStruktur">
+          <h2 class="form-title">Form Penambahan Struktur Organisasi</h2>
+
+          <div class="form-group">
+            <label for="nama">Nama Anggota</label>
+            <input type="text" id="nama" name="nama" required>
+          </div>
+
+          <div class="form-group">
+            <label for="jabatan">Jabatan</label>
+            <input type="text" id="jabatan" name="jabatan" required>
+          </div>
+
+          <div class="form-group">
+            <label for="deskripsi">Deskripsi</label>
+            <input type="text" id="deskripsi" name="deskripsi">
+          </div>
+
+          <div class="form-actions">
+            <a href="index.html" class="btn btn-dark">Batal</a>
+            <button type="submit" class="btn btn-dark">Simpan</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("formStruktur").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(this));
+      console.log("Data tersimpan:", data); // ganti dengan simpan ke API / localStorage
+      alert("Data struktur organisasi berhasil disimpan");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

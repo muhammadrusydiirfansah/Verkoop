@@ -1,0 +1,170 @@
+/* ===== KONTEN STRUKTUR ORGANISASI ===== */
+.struktur-content {
+    padding: 100px 36px;
+}
+
+.page-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1e1e1e;
+    margin-bottom: 4px;
+}
+
+.page-title p {
+    font-size: 14px;
+    color: #6b6b6b;
+}
+
+/* ===== TOOLBAR ===== */
+.struktur-content .toolbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0 18px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 240px;
+}
+
+.search-box i {
+    color: #6b6b6b;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+.search-box:focus-within {
+    border-color: #2b2b2b;
+}
+
+.btn-tambah {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #2b2b2b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-tambah:hover {
+    background: #444444;
+}
+
+/* ===== TABEL ===== */
+.table-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 14px;
+    overflow-x: auto;
+}
+
+.struktur-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.struktur-table th,
+.struktur-table td {
+    padding: 14px 16px;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+}
+
+.struktur-table thead th {
+    background: #f3f3f3;
+    font-weight: 600;
+    color: #1e1e1e;
+}
+
+.struktur-table tbody tr:hover {
+    background: #fafafa;
+}
+
+.struktur-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.struktur-table td:nth-child(4) {
+    text-align: left;
+}
+
+/* lebar kolom */
+.struktur-table th:nth-child(1) { width: 7%; }
+.struktur-table th:nth-child(2) { width: 22%; }
+.struktur-table th:nth-child(3) { width: 16%; }
+.struktur-table th:nth-child(4) { width: 33%; }
+.struktur-table th:nth-child(5) { width: 22%; }
+
+/* ===== TOMBOL AKSI ===== */
+.aksi-group {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-aksi {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-aksi:hover {
+    opacity: 0.85;
+}
+
+.btn-aksi.edit {
+    background: #e8f0fe;
+    color: #1a56db;
+}
+
+.btn-aksi.hapus {
+    background: #fde8e8;
+    color: #c0392b;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 768px) {
+    .struktur-content {
+        padding: 18px;
+    }
+
+    .struktur-content .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .btn-tambah {
+        justify-content: center;
+    }
+}

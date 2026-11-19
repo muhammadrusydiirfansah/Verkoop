@@ -1,0 +1,104 @@
+/* ===== KONTEN FORM ===== */
+.form-content {
+    background: #ffffff;
+    padding: 100px 36px;
+    min-height: calc(100vh - 70px);
+}
+
+/* ===== KARTU FORM ===== */
+.form-card {
+    background: #d9d9d9;
+    border-radius: 18px;
+    padding: 24px 36px 36px;
+    margin: 0 auto;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #1e1e1e;
+    margin-bottom: 40px;
+}
+
+/* ===== INPUT ===== */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #1e1e1e;
+    margin-bottom: 4px;
+}
+
+.form-group input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #1e1e1e;
+    background: #d9d9d9;
+    border: 1px solid #1e1e1e;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    background: #ffffff;
+}
+
+/* ===== TOMBOL ===== */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 40px;
+}
+
+.btn-batal,
+.btn-simpan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+    padding: 0 28px;
+    font-size: 14px;
+    color: #ffffff;
+    background: #2b2b2b;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn-batal {
+    width: 150px;
+}
+
+.btn-batal:hover,
+.btn-simpan:hover {
+    background: #444444;
+}
+
+/* ===== RESPONSIF ===== */
+@media (max-width: 768px) {
+    .form-content {
+        padding: 20px 16px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-batal {
+        width: 100%;
+    }
+}
