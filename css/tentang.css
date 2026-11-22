@@ -1,92 +1,229 @@
+
+/* =================================
+   ABOUT SECTION
+================================= */
+
 .about-section {
     position: relative;
     width: 100%;
-    min-height: 600px;
-    padding: 45px 0;
+    min-height: 650px;
+
+    padding: 35px 0 40px;
     box-sizing: border-box;
 
-    background: #ffffff;
+    background: #f1f3ff;
 
     display: flex;
-    align-items: center;
     justify-content: center;
 
     overflow: hidden;
 }
-
-.about-overlay {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    z-index: 0;
-    pointer-events: none;
-}
-
+/* Container */
 .about-container {
     position: relative;
     z-index: 1;
 
-    width: 90%;
-    
-    margin: auto;
+    width: 86%;
+    max-width: 1200px;
+
+    margin: 0 auto;
 }
 
-.about-container h2 {
+/* =================================
+   HEADING
+================================= */
+
+.about-heading {
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.about-heading h2 {
     text-align: center;
 
-    font-size: clamp(25px, 3vw, 32px);
+    font-size: 28px;
     font-weight: 800;
+
+    color: #101b61;
+
+    margin: 0 0 20px;
+}
+
+.about-heading p {
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.5;
+    text-align: left;
 
     color: #111111;
 
-    margin: 0 0 50px;
+    margin: 0;
 }
+
+/* =================================
+   ABOUT CONTENT
+================================= */
 
 .about-content {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 40px;
 }
 
-.about-item {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+/* Card */
+.about-card {
+    min-height: 445px;
+
+    padding: 55px 48px 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e6ef;
+    border-radius: 12px;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
 }
 
+/* Icon */
 .about-icon {
-    width: 75px;
-    height: 75px;
-    min-width: 75px;
-
-    border-radius: 50%;
-    background: #12345B;
+    width: 54px;
+    height: 54px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background: #f0f2ff;
+
+    border-radius: 11px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 17px;
 }
 
 .about-icon i {
-    font-size: 30px;
-    color: #ffffff;
+    font-size: 31px;
+    color: #101b61;
 }
 
-.about-item p {
-    flex: 1;
+/* Label */
+.about-label {
+    display: inline-block;
+
+    padding: 2px 10px;
+
+    background: #ff1717;
+    color: #ffffff;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    line-height: 1.2;
+
+    margin-bottom: 11px;
+}
+
+/* Card Heading */
+.about-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+
+    color: #101b61;
+
+    margin: 0 0 9px;
+}
+
+/* Card Description */
+.about-card p {
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.4;
+    text-align: justify;
+
+    color: #111111;
 
     margin: 0;
+}
 
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.8;
+/* Text Emphasis */
+.text-red {
+    color: #ff1717;
+    font-weight: 700;
+}
 
-    text-align: justify;
-    color: #222222;
+.text-blue {
+    color: #101b61;
+    font-weight: 800;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 900px) {
+
+    .about-container {
+        width: 90%;
+    }
+
+    .about-content {
+        gap: 22px;
+    }
+
+    .about-card {
+        padding: 40px 28px;
+        min-height: 430px;
+    }
+
+    .about-card h3 {
+        font-size: 18px;
+    }
+
+    .about-card p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .about-section {
+        padding: 45px 0;
+    }
+
+    .about-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-heading h2 {
+        font-size: 25px;
+    }
+
+    .about-heading p {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-card {
+        min-height: auto;
+        padding: 30px 28px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
 }

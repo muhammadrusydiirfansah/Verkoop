@@ -1,236 +1,346 @@
+
+/* =================================
+   STRUCTURE SECTION
+================================= */
+
 .structure-section {
     position: relative;
     width: 100%;
     min-height: 650px;
-    padding: 45px 0 55px;
+
+    padding: 38px 0 65px;
     box-sizing: border-box;
 
-    display: flex;
-    justify-content: center;
-
+    background: #050d50;
     overflow: hidden;
-}
-
-/* Background */
-.structure-background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    z-index: 0;
-    pointer-events: none;
 }
 
 /* Container */
+
 .structure-container {
-    position: relative;
-    z-index: 1;
-    width: 90%;
+    width: 92%;
     max-width: 1200px;
-    margin: auto;
+
+    margin: 0 auto;
 }
 
-/* Heading */
-.structure-container > h2 {
-    text-align: center;
+/* =================================
+   HEADING
+================================= */
+
+.structure-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.structure-heading h2 {
     color: #ffffff;
-    font-size: 26px;
+
+    font-size: 28px;
     font-weight: 800;
-    margin: 0 0 25px;
+
+    text-align: center;
+
+    margin: 0 0 22px;
 }
 
-/* ==============================
+.structure-heading p {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.5;
+    text-align: justify;
+
+    margin: 0;
+}
+
+/* =================================
    COORDINATOR
-============================== */
+================================= */
 
 .coordinator-card {
-    width: 95%;
-    max-width: 1050px;
-    min-height: 200px;
-    margin: 0 auto 25px;
-    padding: 10px;
+    position: relative;
+
+    width: 510px;
+    max-width: 100%;
+    min-height: 150px;
 
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 16px;
+
+    padding: 15px 20px 15px 25px;
+    margin: 0 auto 44px;
 
     background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+
     box-sizing: border-box;
+    overflow: hidden;
 }
 
+/* Garis merah di kiri */
+
+.coordinator-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 7px;
+    height: 100%;
+
+    background: #ff1717;
+}
+
+/* Foto koordinator */
+
 .coordinator-image {
-    width: 30%;
-    min-width: 150px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+
     overflow: hidden;
-    border-radius: 17px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+
+    background: #f0f2ff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .coordinator-image img {
     width: 100%;
     height: 100%;
+
+    display: block;
+
     object-fit: cover;
     object-position: center top;
 }
 
+/* Informasi koordinator */
+
 .coordinator-info {
     flex: 1;
     min-width: 0;
-    padding-right: 12px;
 }
 
 .coordinator-info h3 {
-    font-size: 19px;
+    color: #12345b;
+
+    font-size: 21px;
     font-weight: 800;
-    margin: 0 0 2px;
-    color: #111111;
+
+    margin: 0;
 }
 
 .coordinator-info h4 {
+    color: #12345b;
+
     font-size: 14px;
-    font-weight: 600;
-    margin: 0 0 12px;
-    color: #111111;
+    font-weight: 700;
+
+    margin: 0 0 8px;
 }
 
 .coordinator-info p {
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
+    color: #12345b;
 
     font-size: 13px;
     font-weight: 500;
-    line-height: 1.5;
+
+    line-height: 1.55;
+    text-align: justify;
+
     margin: 0;
-    color: #222222;
 }
 
-.coordinator-info p i {
-    font-size: 20px;
-    color: #aaaaaa;
-}
-
-/* ==============================
+/* =================================
    MEMBERS
-============================== */
+================================= */
 
 .members-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 18px;
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
 }
 
+/* Kartu anggota */
+
 .member-card {
-    width: 250px;
-    min-height: 100px;
-    padding: 7px;
+    min-width: 0;
+    min-height: 98px;
 
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 7px;
+
+    background: #12345b;
+    border-radius: 12px;
 
     box-sizing: border-box;
 }
 
+/* Foto anggota */
+
 .member-image {
-    width: 70px;
-    height: 90px;
-    min-width: 55px;
+    width: 83px;
+    height: 83px;
+    min-width: 83px;
 
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 11px;
+
+    background: #f0f2ff;
 }
 
 .member-image img {
     width: 100%;
     height: 100%;
+
+    display: block;
+
     object-fit: cover;
     object-position: center top;
 }
+
+/* Informasi anggota */
 
 .member-info {
     min-width: 0;
 }
 
 .member-info h3 {
-    font-size: 13px;
+    color: #ffffff;
+
+    font-size: 14px;
     font-weight: 800;
+
     line-height: 1.4;
-    margin: 0 0 5px;
-    color: #111111;
+
+    margin: 0 0 3px;
 }
 
 .member-info p {
-    font-size: 10px;
-    font-weight: 500;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    line-height: 1.4;
+
     margin: 0;
-    color: #444444;
 }
 
-/* ==============================
+/* =================================
+   JOIN CARD
+================================= */
+
+.join-card {
+    min-height: 98px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 12px 20px;
+
+    background: #ff1717;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+.join-card h3 {
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.4;
+
+    margin: 0 0 7px;
+}
+
+.join-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 10px;
+
+    background: #050d50;
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.join-button:hover {
+    background: #ffffff;
+    color: #050d50;
+}
+
+/* =================================
    RESPONSIVE
-============================== */
+================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
-    .structure-section {
-        min-height: auto;
-        padding: 40px 0;
-    }
-
-    .structure-container {
-        width: 92%;
+    .members-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
     }
 
     .coordinator-card {
-        width: 100%;
-        gap: 14px;
+        margin-bottom: 35px;
     }
 
-    .coordinator-image {
-        width: 35%;
-        min-width: 120px;
-        height: 110px;
-    }
-
-    .coordinator-info h3 {
-        font-size: 15px;
-    }
-
-    .coordinator-info h4 {
-        font-size: 12px;
-    }
-
-    .coordinator-info p {
-        font-size: 11px;
-    }
-
-    .member-card {
-        width: calc(50% - 8px);
-    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
-    .structure-container > h2 {
-        font-size: 22px;
+    .structure-section {
+        padding: 35px 0 45px;
+    }
+
+    .structure-container {
+        width: 90%;
+    }
+
+    .structure-heading {
+        margin-bottom: 30px;
+    }
+
+    .structure-heading h2 {
+        font-size: 23px;
+    }
+
+    .structure-heading p {
+        font-size: 12px;
+        text-align: center;
     }
 
     .coordinator-card {
         flex-direction: column;
         align-items: stretch;
-        padding: 12px;
+
+        width: 100%;
+
+        padding: 18px 18px 18px 23px;
+        gap: 12px;
     }
 
     .coordinator-image {
@@ -238,11 +348,29 @@
         height: 180px;
     }
 
-    .coordinator-info {
-        padding: 5px;
+    .coordinator-info h3 {
+        font-size: 18px;
+    }
+
+    .coordinator-info h4 {
+        font-size: 12px;
+    }
+
+    .coordinator-info p {
+        font-size: 12px;
+    }
+
+    .members-container {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
     .member-card {
-        width: 100%;
+        min-height: 95px;
     }
+
+    .join-card {
+        min-height: 110px;
+    }
+
 }

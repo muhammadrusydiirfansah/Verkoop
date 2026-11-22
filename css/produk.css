@@ -1,0 +1,570 @@
+
+/* ==============================
+   GLOBAL
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.product-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #f1f2ff;
+}
+
+/* ==============================
+   HERO PRODUK
+============================== */
+
+.product-hero {
+    padding: 145px 0 30px;
+    color: #ffffff;
+    background: linear-gradient(
+        105deg,
+        #fe1413 0%,
+        #a20d3c 48%,
+        #000b57 100%
+    );
+}
+
+.product-container {
+    width: 94%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.product-hero h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+/* ==============================
+   SEARCH DAN FILTER
+============================== */
+
+.product-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.product-search {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 6px;
+    background: #f1f2ff;
+    color: #85899a;
+}
+
+.product-search i {
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.product-search input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #222222;
+    font-size: 11px;
+}
+
+.product-search input::placeholder {
+    color: #85899a;
+}
+
+.product-filter {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 6px;
+    background: #fe1413;
+    color: #ffffff;
+}
+
+.product-filter select {
+    width: 100%;
+    height: 100%;
+    padding-right: 15px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.product-filter select option {
+    background: #ffffff;
+    color: #222222;
+}
+
+.product-filter i {
+    position: absolute;
+    right: 9px;
+    font-size: 11px;
+    pointer-events: none;
+}
+
+/* ==============================
+   DAFTAR PRODUK
+============================== */
+
+.product-content {
+    min-height: 80vh;
+    padding: 35px 0 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 18px 12px;
+    padding: 0 12px;
+}
+
+/* ==============================
+   KARTU PRODUK
+============================== */
+
+.product-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-radius: 9px;
+    background: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 11, 87, 0.12);
+}
+
+/* Gambar produk */
+
+.product-image {
+    width: 100%;
+    height: 145px;
+    overflow: hidden;
+    background: #bdbdbd;
+}
+
+.product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #bdbdbd;
+    color: #ffffff;
+}
+
+.product-image-placeholder i {
+    font-size: 35px;
+    opacity: 0.65;
+}
+
+/* Informasi produk */
+
+.product-information {
+    padding: 7px 7px 6px;
+}
+
+.product-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.product-name-row h3 {
+    overflow: hidden;
+    margin: 0;
+    color: #000b57;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.product-category-icon {
+    flex-shrink: 0;
+    color: #fe1413;
+    font-size: 14px;
+}
+
+.product-price {
+    margin: 6px 0 7px;
+    color: #fe1413;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Tombol detail */
+
+.product-detail-button {
+    width: 100%;
+    min-height: 25px;
+    padding: 4px;
+    border: none;
+    border-radius: 5px;
+    background: #000b57;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.product-detail-button:hover {
+    background: #fe1413;
+}
+
+/* ==============================
+   PRODUK KOSONG
+============================== */
+
+.product-empty {
+    padding: 60px 15px;
+    color: #777b8c;
+    text-align: center;
+}
+
+.product-empty i {
+    font-size: 18px;
+}
+
+.product-empty p {
+    font-size: 8px;
+}
+
+/* ==============================
+   PAGINATION
+============================== */
+
+.product-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 42px;
+}
+
+.product-pagination button {
+    min-width: 27px;
+    height: 25px;
+    padding: 0 12px;
+    border: 1px solid rgba(0, 11, 87, 0.06);
+    border-radius: 8px;
+    background: #ffffff;
+    color: #000b57;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.product-pagination button.active {
+    border-color: #000b57;
+    background: #000b57;
+    color: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 11, 87, 0.24);
+}
+
+.product-pagination button:hover:not(:disabled):not(.active) {
+    background: #e3e7ff;
+    transform: translateY(-1px);
+}
+
+.product-pagination button:disabled {
+    color: #a7a7aa;
+    cursor: not-allowed;
+}
+
+.product-pagination .pagination-arrow {
+    min-width: 0;
+    padding: 0 18px;
+    font-size: 12px;
+}
+
+.pagination-ellipsis {
+    padding: 0 2px;
+    color: #000b57;
+    font-size: 20px;
+}
+
+/* ==============================
+   MODAL DETAIL
+============================== */
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #000b57;
+    cursor: pointer;
+}
+
+.modal-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 260px;
+    background: #bdbdbd;
+    color: #ffffff;
+}
+
+.modal-image i {
+    font-size: 60px;
+    opacity: 0.7;
+}
+
+.modal-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+}
+
+.modal-information {
+    align-self: center;
+    padding: 30px;
+}
+
+.modal-category {
+    color: #777b8c;
+    font-size: 12px;
+}
+
+.modal-information h2 {
+    margin: 10px 0;
+    color: #000b57;
+    font-size: 24px;
+}
+
+.modal-information h3 {
+    margin: 0 0 15px;
+    color: #fe1413;
+    font-size: 18px;
+}
+
+.modal-information p {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .product-image {
+        height: 140px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE TABLET KECIL
+============================== */
+
+@media (max-width: 768px) {
+    .product-container {
+        width: 95%;
+    }
+
+    .product-hero h1 {
+        font-size: 29px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px 10px;
+        padding: 0 5px;
+    }
+
+    .product-image {
+        height: 125px;
+    }
+
+    .product-name-row h3 {
+        font-size: 10px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+
+@media (max-width: 480px) {
+    .product-hero {
+        padding: 105px 0 22px;
+    }
+
+    .product-hero h1 {
+        font-size: 25px;
+    }
+
+    .product-controls {
+        gap: 7px;
+    }
+
+    .product-search {
+        width: 62%;
+        height: 34px;
+    }
+
+    .product-filter {
+        width: 38%;
+        height: 34px;
+    }
+
+    .product-content {
+        padding: 25px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 9px;
+    }
+
+    .product-image {
+        height: 125px;
+    }
+
+    .product-information {
+        padding: 7px 6px;
+    }
+
+    .product-name-row h3 {
+        font-size: 10px;
+    }
+
+    .product-price {
+        font-size: 10px;
+    }
+
+    .product-detail-button {
+        font-size: 9px;
+    }
+
+    .product-pagination {
+        gap: 7px;
+        margin-top: 25px;
+    }
+
+    .product-pagination button {
+        min-width: 40px;
+        height: 40px;
+        padding: 0 10px;
+        border-radius: 12px;
+        font-size: 14px;
+    }
+
+    .product-pagination .pagination-arrow {
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        grid-template-columns: 1fr;
+        max-width: 340px;
+    }
+
+    .modal-image {
+        min-height: 180px;
+        max-height: 200px;
+    }
+
+    .modal-image img {
+        min-height: 180px;
+    }
+
+    .modal-information {
+        padding: 20px;
+    }
+
+    .modal-information h2 {
+        font-size: 20px;
+    }
+}

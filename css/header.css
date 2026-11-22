@@ -1,3 +1,24 @@
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+main,
+section,
+article,
+.header-container,
+.footer-container {
+    min-width: 0;
+}
+
 .main-header {
     position: fixed;
     top: 0;
@@ -5,7 +26,7 @@
     width: 100%;
     z-index: 1000;
 
-    padding: 20px 0;
+    padding: 0;
 
     background: transparent;
     transition: background 0.3s ease,
@@ -15,9 +36,9 @@
 
 .main-header.scrolled {
     background: rgba(255, 255, 255, 0.85);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-    padding: 15px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+    padding: 0;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,17 +51,54 @@ backdrop-filter: blur(10px);
 }
 
 .main-header.scrolled .main-nav a:hover {
-    color: #e30613;
+    color: #fe1413;
 }
 
 .header-container {
     width: 95%;
     max-width: 1200px;
+    margin-right: auto;
+    margin: 6px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* =================================
+   HEADER INFORMATION
+================================= */
+
+.header-info {
+    width: 100%;
+    background: #000B57;
+    color: #ffffff;
+}
+
+.header-info-container {
+    width: 95%;
+    max-width: 1200px;
+    min-height: 38px;
     margin: auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.info-item i {
+    font-size: 14px;
+    color: #ffffff;
 }
 
 .brand {
@@ -104,5 +162,136 @@ backdrop-filter: blur(10px);
 }
 
 .main-nav a:hover {
-    color: #ffd166;
+    color: #fe1413;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header-info-container {
+        width: 92%;
+        min-height: 34px;
+    }
+
+    .header-info-container .info-item:last-child {
+        display: none;
+    }
+
+    .header-container {
+        position: relative;
+        width: 92%;
+        min-height: 58px;
+        margin: 0 auto;
+    }
+
+    .brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        font-size: 18px;
+    }
+
+    .brand-tagline {
+        max-width: 180px;
+        font-size: 7px;
+    }
+
+    .nav-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .main-header.scrolled .nav-toggle {
+        border-color: rgba(0, 11, 87, 0.15);
+        background: #ffffff;
+        color: #000b57;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: calc(100% + 8px);
+        left: 0;
+        right: 0;
+        display: none;
+        padding: 8px;
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 12px 30px rgba(0, 11, 87, 0.18);
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 11px 12px;
+        border-radius: 8px;
+        color: #000b57;
+        font-size: 13px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a[aria-current="page"] {
+        background: #f1f2ff;
+        color: #fe1413;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-info-container {
+        min-height: 32px;
+    }
+
+    .info-item {
+        font-size: 9px;
+    }
+
+    .header-container {
+        min-height: 54px;
+    }
+
+    .brand {
+        gap: 7px;
+    }
+
+    .brand img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .brand-name {
+        font-size: 16px;
+    }
+
+    .brand-tagline {
+        max-width: 150px;
+        font-size: 6px;
+    }
+
+    .nav-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 21px;
+    }
 }

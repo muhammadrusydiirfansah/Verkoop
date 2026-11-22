@@ -1,0 +1,461 @@
+/* ==============================
+   GLOBAL
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.schedule-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #f1f2ff;
+}
+
+/* ==============================
+   HERO / BAGIAN ATAS
+============================== */
+
+.schedule-hero {
+    padding: 145px 0 30px;
+    color: #ffffff;
+    background: linear-gradient(
+        105deg,
+        #fe1413 0%,
+        #a20d3c 48%,
+        #000b57 100%
+    );
+}
+
+.schedule-container {
+    position: relative;
+    z-index: 2;
+    width: 88%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.schedule-heading {
+    margin-bottom: 26px;
+    color: #ffffff;
+}
+
+.schedule-heading h1 {
+    margin: 0 0 25px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.schedule-heading p {
+    max-width: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ==============================
+   SEARCH DAN FILTER
+============================== */
+
+.schedule-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 28px;
+    margin-top: 26px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 265px;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background: #f1f2ff;
+    color: #777b8c;
+}
+
+.search-box i {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #222;
+    font-size: 12px;
+}
+
+.search-box input::placeholder {
+    color: #777b8c;
+}
+
+.filter-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 125px;
+    height: 38px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background: #fe1413;
+    color: #ffffff;
+}
+
+.filter-box select {
+    width: 100%;
+    height: 100%;
+    padding-right: 18px;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.filter-box select option {
+    background: #ffffff;
+    color: #222222;
+}
+
+.filter-box i {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+    font-size: 13px;
+}
+
+/* ==============================
+   BAGIAN TABEL
+============================== */
+
+.schedule-content {
+    position: relative;
+    z-index: 2;
+    min-height: 500px;
+    padding: 55px 0 100px;
+    background: #f1f2ff;
+}
+
+.schedule-table-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+    color: #20263b;
+}
+
+.schedule-table thead {
+    background: #000b57;
+    color: #ffffff;
+}
+
+.schedule-table th {
+    padding: 14px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.schedule-table td {
+    padding: 13px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    vertical-align: top;
+}
+
+/* Lebar masing-masing kolom */
+
+.schedule-table th:nth-child(1),
+.schedule-table td:nth-child(1) {
+    width: 15%;
+}
+
+.schedule-table th:nth-child(2),
+.schedule-table td:nth-child(2) {
+    width: 23%;
+}
+
+.schedule-table th:nth-child(3),
+.schedule-table td:nth-child(3) {
+    width: 32%;
+}
+
+.schedule-table th:nth-child(4),
+.schedule-table td:nth-child(4) {
+    width: 30%;
+}
+
+/* Warna baris tabel */
+
+.schedule-table tbody tr:nth-child(odd) {
+    background: #ffffff;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background: #f1f2ff;
+}
+
+.schedule-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.schedule-table tbody tr:hover {
+    background: #e5e9ff;
+}
+
+/* ==============================
+   ISI TABEL
+============================== */
+
+.day-cell {
+    color: #000b57;
+    font-weight: 700 !important;
+    text-align: center;
+}
+
+.session-cell {
+    white-space: nowrap;
+    color: #30364a;
+}
+
+.session-cell i {
+    margin-right: 5px;
+    color: #85899a;
+    font-size: 12px;
+}
+
+.officers-cell,
+.departments-cell {
+    display: table-cell;
+}
+
+/* Daftar nama petugas */
+
+.officer-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.officer-item:last-child {
+    margin-bottom: 0;
+}
+
+.officer-number {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #e6eaff;
+    color: #000b57;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.officer-item span:last-child {
+    font-weight: 600;
+}
+
+/* Daftar departemen */
+
+.department-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    min-height: 17px;
+    font-size: 11px;
+}
+
+.department-item:last-child {
+    margin-bottom: 0;
+}
+
+.department-dot {
+    flex-shrink: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #000b57;
+}
+
+/* Warna indikator departemen */
+
+.department-dot.kewirausahaan {
+    background: #000b57;
+}
+
+.department-dot.sdm {
+    background: #00bd83;
+}
+
+.department-dot.infokom {
+    background: #00a7ed;
+}
+
+.department-dot.litbang {
+    background: #985cff;
+}
+
+.department-dot.bph {
+    background: #ff9900;
+}
+
+.department-dot.sosmas {
+    background: #fe1413;
+}
+
+/* Pesan jika data tidak ditemukan */
+
+.schedule-empty {
+    padding: 25px;
+    color: #777b8c;
+    text-align: center;
+    font-size: 14px;
+}
+
+.schedule-empty[hidden] {
+    display: none;
+}
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
+
+@media (max-width: 768px) {
+
+    .schedule-hero {
+        padding: 115px 0 30px;
+    }
+
+    .schedule-container {
+        width: 90%;
+    }
+
+    .schedule-heading h1 {
+        font-size: 32px;
+    }
+
+    .schedule-heading p {
+        font-size: 14px;
+    }
+
+    .schedule-controls {
+        gap: 12px;
+    }
+
+    .search-box {
+        width: 230px;
+    }
+
+    .schedule-content {
+        padding: 40px 0 80px;
+    }
+
+    .schedule-table-wrapper {
+        width: 100%;
+    }
+
+    .schedule-table {
+        min-width: 700px;
+    }
+
+    .schedule-table th {
+        font-size: 12px;
+    }
+
+    .schedule-table td {
+        font-size: 11px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+
+@media (max-width: 480px) {
+
+    .schedule-hero {
+        padding: 105px 0 25px;
+    }
+
+    .schedule-heading h1 {
+        font-size: 27px;
+        margin-bottom: 18px;
+    }
+
+    .schedule-heading p {
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .schedule-controls {
+        justify-content: space-between;
+        gap: 8px;
+        margin-top: 22px;
+    }
+
+    .search-box {
+        width: 62%;
+        height: 36px;
+    }
+
+    .filter-box {
+        width: 38%;
+        height: 36px;
+    }
+
+    .schedule-content {
+        padding: 30px 0 70px;
+    }
+
+    .schedule-table {
+        min-width: 680px;
+    }
+
+    .schedule-table th {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .schedule-table td {
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .schedule-wave {
+        min-height: 50px;
+    }
+}

@@ -1,7 +1,7 @@
     .main-footer {
         width: 100%;
-        background-color: #ffffff;
-        color: #111111;
+        background-color: #000b57;
+        color: #fff;
 
     }
 
@@ -21,7 +21,7 @@
         align-items: center;
         gap: 10px;
         text-decoration: none;
-        color: #111111;
+        color: #fff;
         margin-bottom: 12px;
     }
 
@@ -50,7 +50,7 @@
     }
 
     .brand-text span {
-        color: #000000;
+        color: #fff;
     }
 
     .footer-brand p {
@@ -75,7 +75,7 @@
     }
 
     .footer-nav-column a {
-        color: #111111;
+        color: #fff;
         font-size: 13px;
         font-weight: 600;
         text-decoration: none;
@@ -83,7 +83,7 @@
     }
 
     .footer-nav-column a:hover {
-        color: #b20d2c;
+        color: #fe1413;
     }
 
     .footer-contact {
@@ -98,7 +98,7 @@
         align-items: center;
         gap: 10px;
 
-        color: #111111;
+        color: #fff;
         font-size: 11px;
         text-decoration: none;
     }
@@ -110,7 +110,7 @@
     }
 
     .footer-contact a:hover {
-        color: #b20d2c;
+        color: #fe1413;
     }
 
     .footer-bottom {
@@ -123,3 +123,54 @@
         font-size: 12px;
         margin: 0;
     }
+
+@media (max-width: 768px) {
+    .footer-container {
+        width: 92%;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand p {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 26px 0;
+    }
+
+    .footer-brand,
+    .footer-navigation,
+    .footer-contact {
+        grid-column: 1;
+    }
+
+    .footer-navigation {
+        gap: 18px;
+    }
+
+    .footer-nav-column {
+        gap: 11px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+    }
+
+    .footer-contact {
+        gap: 10px;
+    }
+
+    .footer-contact a {
+        font-size: 10px;
+        overflow-wrap: anywhere;
+    }
+}

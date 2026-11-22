@@ -1,0 +1,258 @@
+
+/* ==============================
+   GLOBAL
+============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.flow-section {
+    width: 100%;
+    min-height: 100vh;
+    background: #f1f2ff;
+}
+
+/* ==============================
+   HEADER ALUR
+============================== */
+
+.flow-hero {
+    padding: 145px 0 30px;
+    color: #ffffff;
+    background: linear-gradient(
+        105deg,
+        #fe1413 0%,
+        #a20d3c 48%,
+        #000b57 100%
+    );
+}
+
+.flow-container {
+    width: 88%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.flow-hero h1 {
+    margin: 0 0 25px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.flow-hero p {
+    max-width: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ==============================
+   KONTEN ALUR
+============================== */
+
+.flow-content {
+    min-height: 80vh;
+    padding: 35px 0 45px;
+    background: #f1f2ff;
+}
+
+.flow-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ==============================
+   KARTU TAHAPAN
+============================== */
+
+.flow-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 96px;
+    padding: 15px 17px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 1px 1px rgba(0, 11, 87, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.flow-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 11, 87, 0.1);
+}
+
+/* Ikon */
+
+.flow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 9px;
+    background: #000b57;
+    color: #ffffff;
+}
+
+.flow-icon i {
+    font-size: 25px;
+}
+
+/* Informasi */
+
+.flow-information {
+    flex: 1;
+    min-width: 0;
+}
+
+.flow-label {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    background: #fe1413;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.flow-information h2 {
+    margin: 0 0 3px;
+    color: #000b57;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.flow-information p {
+    margin: 0;
+    color: #394b68;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* ==============================
+   RESPONSIVE TABLET
+============================== */
+
+@media (max-width: 768px) {
+
+    .flow-container {
+        width: 90%;
+    }
+
+    .flow-hero {
+        padding: 115px 0 30px;
+    }
+
+    .flow-hero h1 {
+        font-size: 26px;
+    }
+
+    .flow-hero p {
+        font-size: 12px;
+    }
+
+    .flow-content {
+        padding: 28px 0 35px;
+    }
+
+    .flow-card {
+        gap: 14px;
+        padding: 13px;
+    }
+
+    .flow-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .flow-icon i {
+        font-size: 22px;
+    }
+
+    .flow-information h2 {
+        font-size: 11px;
+    }
+
+    .flow-information p {
+        font-size: 11px;
+    }
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+
+@media (max-width: 480px) {
+
+    .flow-container {
+        width: 92%;
+    }
+
+    .flow-hero {
+        padding: 20px 0 25px;
+    }
+
+    .flow-hero h1 {
+        font-size: 23px;
+        margin-bottom: 12px;
+    }
+
+    .flow-hero p {
+        font-size: 11px;
+    }
+
+    .flow-content {
+        padding: 22px 0 30px;
+    }
+
+    .flow-list {
+        gap: 12px;
+    }
+
+    .flow-card {
+        align-items: flex-start;
+        gap: 11px;
+        padding: 12px;
+    }
+
+    .flow-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 7px;
+    }
+
+    .flow-icon i {
+        font-size: 19px;
+    }
+
+    .flow-label {
+        font-size: 8px;
+        padding: 2px 7px;
+    }
+
+    .flow-information h2 {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+    .flow-information p {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+}
