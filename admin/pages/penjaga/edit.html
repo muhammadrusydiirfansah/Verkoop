@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tambah Jadwal Penjaga | Verkoop</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Admin -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <!-- CSS Tambah Penjaga -->
+    <link rel="stylesheet" href="../../css/penjaga/edit.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN UTAMA -->
+            <section class="create-content">
+
+                <!-- FORM PENAMBAHAN JADWAL -->
+                <div class="form-card">
+
+                    <h2>Form Penambahan Jadwal Penjaga</h2>
+
+                    <form action="#" method="POST">
+
+                        <!-- Nama Penjaga -->
+                        <div class="form-group">
+                            <label for="nama">
+                                Nama Penjaga
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nama"
+                                name="nama"
+                                required
+                            >
+                        </div>
+
+                        <!-- Jam Menjaga -->
+                        <div class="form-group">
+                            <label for="jam">
+                                Jam menjaga
+                            </label>
+
+                            <input
+                                type="text"
+                                id="jam"
+                                name="jam"
+                                placeholder=""
+                                required
+                            >
+                        </div>
+
+                        <!-- Nomor Telepon -->
+                        <div class="form-group">
+                            <label for="telepon">
+                                No. Telp
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telepon"
+                                name="telepon"
+                                required
+                            >
+                        </div>
+
+                        <!-- TOMBOL -->
+                        <div class="form-buttons">
+
+                            <a href="index.html" class="btn-cancel">
+                                Batal
+                            </a>
+
+                            <button type="submit" class="btn-save">
+                                Simpan Penjaga
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- JAVASCRIPT ADMIN -->
+    <script src="../../js/admin.js"></script>
+
+</body>
+</html>

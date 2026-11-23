@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tambah Produk | Verkoop</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Utama Admin -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <!-- CSS Tambah Produk -->
+    <link rel="stylesheet" href="../../css/kategori/create.css">
+</head>
+
+<body data-page-title="Tambah Produk">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN TAMBAH PRODUK -->
+            <section class="produk-create-content">
+
+                <div class="produk-create-container">
+
+                    <!-- JUDUL -->
+                    <h2>Tambah Data Produk</h2>
+
+                    <!-- FORM PRODUK -->
+                    <form class="produk-create-form">
+
+                        <!-- GAMBAR PRODUK -->
+                        <div class="form-group">
+                            <label for="gambar">Gambar Produk</label>
+
+                            <input
+                                type="file"
+                                id="gambar"
+                                name="gambar"
+                                accept="image/*"
+                                required
+                            >
+                        </div>
+
+                        <!-- NAMA PRODUK -->
+                        <div class="form-group">
+                            <label for="nama">Nama Produk</label>
+
+                            <input
+                                type="text"
+                                id="nama"
+                                name="nama"
+                                placeholder="Masukkan nama produk"
+                                required
+                            >
+                        </div>
+
+                        <!-- HARGA PRODUK -->
+                        <div class="form-group">
+                            <label for="harga">Harga Produk</label>
+
+                            <input
+                                type="number"
+                                id="harga"
+                                name="harga"
+                                placeholder="Masukkan harga produk"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+                        <!-- DESKRIPSI PRODUK -->
+                        <div class="form-group">
+                            <label for="deskripsi">Deskripsi Produk</label>
+
+                            <textarea
+                                id="deskripsi"
+                                name="deskripsi"
+                                rows="3"
+                                placeholder="Masukkan deskripsi produk"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <!-- TOMBOL AKSI -->
+                        <div class="form-actions">
+
+                            <a href="index.html" class="btn-cancel">
+                                Batal
+                            </a>
+
+                            <button type="submit" class="btn-add">
+                                Tambah Produk
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- JAVASCRIPT ADMIN -->
+    <script src="../../js/admin.js"></script>
+
+    <!-- JUDUL HEADER -->
+    <script>
+        const observer = new MutationObserver(() => {
+
+            const title = document.getElementById("page-title");
+
+            if (title) {
+                title.textContent = "Tambah Produk";
+                observer.disconnect();
+            }
+
+        });
+
+        observer.observe(
+            document.getElementById("header-container"),
+            {
+                childList: true,
+                subtree: true
+            }
+        );
+    </script>
+
+</body>
+</html>
