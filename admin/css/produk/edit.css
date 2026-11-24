@@ -1,0 +1,151 @@
+
+/* ============================= */
+/* FORM EDIT PRODUK */
+/* ============================= */
+
+.product-form-container {
+    width: 100%;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+}
+
+/* JUDUL FORM */
+
+.product-form-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 70px 0;
+}
+
+/* FORM */
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* GROUP INPUT */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* LABEL */
+
+.form-group label {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* INPUT */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #777;
+    border-radius: 12px;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+}
+
+/* INPUT GAMBAR */
+
+.form-group input[type="file"] {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* INPUT FOCUS */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #333;
+}
+
+/* DESKRIPSI */
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 45px;
+}
+
+/* AREA TOMBOL */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+/* TOMBOL BATAL */
+
+.cancel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 52px;
+    background-color: #363636;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+/* TOMBOL PERBARUI */
+
+.save-product-btn {
+    width: 170px;
+    height: 52px;
+    background-color: #363636;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* HOVER */
+
+.cancel-btn:hover,
+.save-product-btn:hover {
+    background-color: #555;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+
+    .product-form-container {
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    .product-form-title {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+
+    .form-buttons {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .cancel-btn,
+    .save-product-btn {
+        width: 100%;
+    }
+
+}

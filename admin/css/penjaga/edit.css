@@ -1,0 +1,128 @@
+/* =====================================
+   KONTEN UTAMA
+===================================== */
+
+.create-content {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 85px 50px 50px;
+    background-color: #ffffff;
+}
+
+
+/* =====================================
+   FORM CARD
+===================================== */
+
+.form-card {
+    width: 100%;
+    min-height: 380px;
+    padding: 15px 30px 25px;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+
+/* =====================================
+   JUDUL FORM
+===================================== */
+
+.form-card h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #111111;
+    margin-bottom: 55px;
+}
+
+
+/* =====================================
+   INPUT FORM
+===================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #111111;
+    margin-bottom: 2px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 34px;
+    padding: 7px 12px;
+    border: 1px solid #888888;
+    border-radius: 9px;
+    outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #111111;
+}
+
+.form-group input:focus {
+    border-color: #333333;
+}
+
+
+/* =====================================
+   TOMBOL BATAL DAN SIMPAN
+===================================== */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 13px;
+    margin-top: 38px;
+}
+
+.btn-cancel,
+.btn-save {
+    width: 125px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 9px;
+    background-color: #333333;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cancel:hover,
+.btn-save:hover {
+    background-color: #555555;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .create-content {
+        padding: 20px 15px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .form-card h2 {
+        margin-bottom: 35px;
+    }
+
+    .form-buttons {
+        margin-top: 25px;
+    }
+
+}

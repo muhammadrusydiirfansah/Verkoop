@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Produk | Verkoop</title>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Admin -->
+    <link rel="stylesheet" href="../../css/admin.css">
+
+    <!-- CSS Kategori -->
+    <link rel="stylesheet" href="../../css/kategori/index.css">
+</head>
+
+<body data-page-title="Kelola Kategori">
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN KELOLA PRODUK -->
+            <section class="produk-content">
+
+                <!-- TOMBOL AKSI -->
+                <div class="produk-toolbar">
+
+                    <button class="btn-search">
+                        Cari Produk
+                    </button>
+
+                    <a href="create.html" class="btn-add">
+                        Tambah Produk
+                    </a>
+
+                </div>
+
+                <!-- TABEL PRODUK -->
+                <div class="produk-table-container">
+
+                    <table class="produk-table">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Gambar Produk</th>
+                                <th>Nama Produk</th>
+                                <th>Harga Produk</th>
+                                <th>Deskripsi Produk</th>
+                                <th>Tombol Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+
+                                <td>
+                                    <div class="produk-actions">
+
+                                        <a href="edit.html"
+                                            class="btn-edit">
+                                            Edit
+                                        </a>
+
+                                        <button class="btn-delete">
+                                            Hapus
+                                        </button>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- JAVASCRIPT ADMIN -->
+    <script src="../../js/admin.js"></script>
+
+    <!-- Judul halaman khusus -->
+    <script>
+        const observer = new MutationObserver(() => {
+            const title = document.getElementById("page-title");
+
+            if (title) {
+                title.textContent = "Kelola Produk";
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(
+            document.getElementById("header-container"),
+            { childList: true, subtree: true }
+        );
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Produk | Verkoop</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/produk/index.css">
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <div id="sidebar-container"></div>
+
+        <!-- AREA UTAMA -->
+        <main class="main-area">
+
+            <!-- HEADER -->
+            <div id="header-container"></div>
+
+            <!-- KONTEN DASHBOARD -->
+            <section class="dashboard-content">
+
+                <!-- TOOLBAR PRODUK -->
+                <div class="product-toolbar">
+
+                    <!-- PENCARIAN PRODUK -->
+                    <div class="search-product">
+                        <input type="text" placeholder="Cari Produk">
+                        <button type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- TAMBAH PRODUK -->
+                    <a href="pages/tambah-produk.html" class="add-product-btn">
+                        <i class="bi bi-plus-lg"></i>
+                        Tambah Produk
+                    </a>
+
+                </div>
+
+                <!-- TABEL PRODUK -->
+                <div class="product-table-container">
+
+                    <table class="product-table">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Gambar Produk</th>
+                                <th>Nama Produk</th>
+                                <th>Harga Produk</th>
+                                <th>Deskripsi Produk</th>
+                                <th>Tombol Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <!-- DATA PRODUK -->
+                            <tr>
+                                <td>1</td>
+
+                                <td>
+                                    <img src="../assets/images/produk/produk1.jpg"
+                                        alt="Gambar Produk"
+                                        class="product-image">
+                                </td>
+
+                                <td>Nama Produk</td>
+
+                                <td>Rp10.000</td>
+
+                                <td>
+                                    Deskripsi produk ditampilkan
+                                    pada bagian ini.
+                                </td>
+
+                                <td>
+                                    <div class="product-actions">
+
+                                        <a href="pages/edit-produk.html"
+                                            class="edit-btn">
+                                            <i class="bi bi-pencil-square"></i>
+                                            Edit
+                                        </a>
+
+                                        <button type="button"
+                                            class="delete-btn">
+                                            <i class="bi bi-trash"></i>
+                                            Hapus
+                                        </button>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="../../js/admin.js"></script>
+
+</body>
+</html>
