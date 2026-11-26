@@ -102,3 +102,30 @@
     transform: translateY(-2px);
 }
 
+@media (max-width: 480px) {
+    .dashboard-content {
+        padding: 16px;
+    }
+
+    .welcome-section h2 {
+        font-size: 24px;
+    }
+
+    .stats-grid,
+    .action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        min-height: 135px;
+    }
+
+    .stat-card h3 {
+        font-size: 48px;
+    }
+
+    .quick-actions {
+        padding: 14px;
+    }
+}
+

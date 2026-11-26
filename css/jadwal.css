@@ -8,7 +8,6 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
 }
 
 .schedule-section {
@@ -16,7 +15,7 @@ body {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
-    background: #f1f2ff;
+    background: var(--color-page-background);
 }
 
 /* ==============================
@@ -25,12 +24,12 @@ body {
 
 .schedule-hero {
     padding: 145px 0 30px;
-    color: #ffffff;
+    color: var(--color-white);
     background: linear-gradient(
         105deg,
-        #fe1413 0%,
-        #a20d3c 48%,
-        #000b57 100%
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 48%,
+        var(--color-secondary) 100%
     );
 }
 
@@ -44,7 +43,7 @@ body {
 
 .schedule-heading {
     margin-bottom: 26px;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .schedule-heading h1 {
@@ -57,7 +56,7 @@ body {
 .schedule-heading p {
     max-width: 100%;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
     text-align: justify;
@@ -82,8 +81,8 @@ body {
     height: 38px;
     padding: 0 12px;
     border-radius: 8px;
-    background: #f1f2ff;
-    color: #777b8c;
+    background: var(--color-page-background);
+    color: var(--color-text-muted);
 }
 
 .search-box i {
@@ -97,12 +96,12 @@ body {
     border: none;
     outline: none;
     background: transparent;
-    color: #222;
+    color: var(--color-text);
     font-size: 12px;
 }
 
 .search-box input::placeholder {
-    color: #777b8c;
+    color: var(--color-text-muted);
 }
 
 .filter-box {
@@ -113,8 +112,8 @@ body {
     height: 38px;
     padding: 0 12px;
     border-radius: 8px;
-    background: #fe1413;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 .filter-box select {
@@ -125,14 +124,14 @@ body {
     border: none;
     outline: none;
     background: transparent;
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 12px;
     cursor: pointer;
 }
 
 .filter-box select option {
-    background: #ffffff;
-    color: #222222;
+    background: var(--color-white);
+    color: var(--color-text);
 }
 
 .filter-box i {
@@ -151,7 +150,7 @@ body {
     z-index: 2;
     min-height: 500px;
     padding: 55px 0 100px;
-    background: #f1f2ff;
+    background: var(--color-page-background);
 }
 
 .schedule-table-wrapper {
@@ -169,8 +168,8 @@ body {
 }
 
 .schedule-table thead {
-    background: #000b57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
 }
 
 .schedule-table th {
@@ -214,11 +213,11 @@ body {
 /* Warna baris tabel */
 
 .schedule-table tbody tr:nth-child(odd) {
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 .schedule-table tbody tr:nth-child(even) {
-    background: #f1f2ff;
+    background: var(--color-page-background);
 }
 
 .schedule-table tbody tr {
@@ -234,7 +233,7 @@ body {
 ============================== */
 
 .day-cell {
-    color: #000b57;
+    color: var(--color-secondary);
     font-weight: 700 !important;
     text-align: center;
 }
@@ -246,7 +245,7 @@ body {
 
 .session-cell i {
     margin-right: 5px;
-    color: #85899a;
+    color: var(--color-text-muted);
     font-size: 12px;
 }
 
@@ -278,7 +277,7 @@ body {
     height: 17px;
     border-radius: 50%;
     background: #e6eaff;
-    color: #000b57;
+    color: var(--color-secondary);
     font-size: 10px;
     font-weight: 700;
 }
@@ -307,13 +306,14 @@ body {
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #000b57;
+    background: var(--color-secondary);
 }
 
 /* Warna indikator departemen */
 
+.department-dot.kwu,
 .department-dot.kewirausahaan {
-    background: #000b57;
+    background: var(--color-secondary);
 }
 
 .department-dot.sdm {
@@ -333,14 +333,14 @@ body {
 }
 
 .department-dot.sosmas {
-    background: #fe1413;
+    background: var(--color-primary);
 }
 
 /* Pesan jika data tidak ditemukan */
 
 .schedule-empty {
     padding: 25px;
-    color: #777b8c;
+    color: var(--color-text-muted);
     text-align: center;
     font-size: 14px;
 }

@@ -51,7 +51,7 @@ article,
 }
 
 .main-header.scrolled .main-nav a:hover {
-    color: #fe1413;
+    color: var(--color-primary);
 }
 
 .header-container {
@@ -71,8 +71,8 @@ article,
 
 .header-info {
     width: 100%;
-    background: #000B57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
 }
 
 .header-info-container {
@@ -92,13 +92,13 @@ article,
     align-items: center;
     gap: 8px;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 .info-item i {
     font-size: 14px;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .brand {
@@ -110,8 +110,8 @@ article,
 }
 
 .brand img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
 
@@ -133,7 +133,7 @@ article,
 }
 
 .brand-name {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -162,7 +162,7 @@ article,
 }
 
 .main-nav a:hover {
-    color: #fe1413;
+    color: var(--color-primary);
 }
 
 .nav-toggle {
@@ -210,15 +210,15 @@ article,
         border: 1px solid rgba(255, 255, 255, 0.35);
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.12);
-        color: #ffffff;
+        color: var(--color-white);
         font-size: 24px;
         cursor: pointer;
     }
 
     .main-header.scrolled .nav-toggle {
         border-color: rgba(0, 11, 87, 0.15);
-        background: #ffffff;
-        color: #000b57;
+        background: var(--color-white);
+        color: var(--color-secondary);
     }
 
     .main-nav {
@@ -229,7 +229,7 @@ article,
         display: none;
         padding: 8px;
         border-radius: 12px;
-        background: #ffffff;
+        background: var(--color-white);
         box-shadow: 0 12px 30px rgba(0, 11, 87, 0.18);
     }
 
@@ -247,14 +247,14 @@ article,
         display: block;
         padding: 11px 12px;
         border-radius: 8px;
-        color: #000b57;
+        color: var(--color-secondary);
         font-size: 13px;
     }
 
     .main-nav a:hover,
     .main-nav a[aria-current="page"] {
-        background: #f1f2ff;
-        color: #fe1413;
+        background: var(--color-page-background);
+        color: var(--color-primary);
     }
 }
 

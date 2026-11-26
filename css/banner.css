@@ -14,8 +14,8 @@
 
     background: linear-gradient(
         90deg,
-        #FE1413 0%,
-        #000B57 100%
+        var(--color-primary) 0%,
+        var(--color-secondary) 100%
     );
 
     display: flex;
@@ -43,7 +43,7 @@
 ================================= */
 
 .hero-description {
-    color: #ffffff;
+    color: var(--color-white);
     max-width: 650px;
 }
 
@@ -69,7 +69,7 @@
 
     background: rgba(255, 255, 255, 0.22);
 
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 10px;
     font-weight: 600;
 }
@@ -79,9 +79,9 @@
 .hero-description h1 {
     margin: 0 0 20px;
 
-    color: #ffffff;
+    color: var(--color-white);
 
-    font-size: clamp(30px, 3.5vw, 42px);
+    font-size: clamp(32px, 3.5vw, 40px);
     font-weight: 800;
     line-height: 1.12;
 }
@@ -93,9 +93,9 @@
 
     margin: 0;
 
-    color: #ffffff;
+    color: var(--color-white);
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.55;
 }
@@ -121,19 +121,19 @@
 
     border-radius: 7px;
 
-    background: #000B57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
 
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 
     transition: all 0.3s ease;
 }
 
 .hero-button:hover {
-    background: #ffffff;
-    color: #000B57;
+    background: var(--color-white);
+    color: var(--color-secondary);
     transform: translateY(-3px);
 }
 
@@ -211,7 +211,7 @@
     bottom: clamp(18px, 3.8cqi, 34px);
     z-index: 2;
 
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .showcase-badge {
@@ -221,8 +221,8 @@
     padding: 5px 12px;
     border: 1px solid rgba(255, 255, 255, 0.75);
     border-radius: 999px;
-    background: #ff2424;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
     font-size: clamp(12px, 1.7cqi, 16px);
     font-weight: 700;
     line-height: 1;
@@ -231,7 +231,7 @@
 
 .showcase-content h2 {
     margin: 12px 0 10px;
-    color: #ffffff;
+    color: var(--color-white);
     font-size: clamp(20px, 5cqi, 44px);
     font-weight: 800;
     line-height: 1.08;
@@ -263,7 +263,7 @@
     justify-content: center;
 
     background: rgba(65, 65, 65, 0.56);
-    color: #ffffff;
+    color: var(--color-white);
     font-size: 17px;
 
     cursor: pointer;
@@ -309,7 +309,7 @@
 
 .showcase-indicators button.active {
     width: 20px;
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 /* =================================
@@ -340,7 +340,7 @@
     align-items: center;
     gap: 12px;
     margin: 0 18px;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .stat-icon {

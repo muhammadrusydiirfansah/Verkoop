@@ -4,24 +4,23 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
 }
 
 .detail-section {
     min-height: 100vh;
-    background: #f1f2ff;
+    background: var(--color-page-background);
 }
 
 .detail-hero {
     position: relative;
     min-height: 210px;
     padding: 145px 0 30px;
-    background: linear-gradient(105deg, #fe1413 0%, #9f123e 48%, #000b57 100%);
+    background: linear-gradient(105deg, var(--color-primary) 0%, var(--color-primary-dark) 48%, var(--color-secondary) 100%);
 }
 
 .detail-hero h1 {
     margin: 0;
-    color: #ffffff;
+    color: var(--color-white);
     text-align: center;
     font-size: 36px;
     font-weight: 800;
@@ -46,7 +45,7 @@ body {
     min-height: 34px;
     padding: 0 12px;
     border-radius: 7px;
-    background: #ffffff;
+    background: var(--color-white);
     color: #1d2345;
     font-size: 12px;
     font-weight: 700;
@@ -65,9 +64,9 @@ body {
     align-items: center;
     min-height: 230px;
     padding: 28px 24px;
-    border: 1px solid #dfe2ef;
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 .detail-product-image {
@@ -79,7 +78,7 @@ body {
     overflow: hidden;
     border-radius: 10px;
     background: #c2c2c2;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .detail-product-image i {
@@ -102,27 +101,27 @@ body {
     margin-bottom: 7px;
     padding: 3px 11px;
     border-radius: 20px;
-    background: #000b57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
     font-size: 10px;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
 .detail-product-status.partner {
-    background: #fe1413;
+    background: var(--color-primary);
 }
 
 .detail-product-information h2 {
     margin: 0 0 3px;
-    color: #000b57;
+    color: var(--color-secondary);
     font-size: 30px;
     line-height: 1.1;
 }
 
 .detail-product-price {
     margin: 0 0 17px;
-    color: #fe1413;
+    color: var(--color-primary);
     font-size: 22px;
     font-weight: 800;
 }
@@ -148,8 +147,8 @@ body {
     min-width: 78px;
     min-height: 27px;
     border-radius: 20px;
-    background: #000b57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
     font-size: 11px;
     font-weight: 800;
 }
@@ -168,7 +167,7 @@ body {
 
 .related-heading h2 {
     margin: 0;
-    color: #000b57;
+    color: var(--color-secondary);
     font-size: 22px;
 }
 
@@ -179,8 +178,8 @@ body {
     min-height: 34px;
     padding: 0 13px;
     border-radius: 7px;
-    background: linear-gradient(90deg, #000b57, #37113f);
-    color: #ffffff;
+    background: linear-gradient(90deg, var(--color-secondary), #37113f);
+    color: var(--color-white);
     font-size: 11px;
     font-weight: 700;
     text-decoration: none;
@@ -195,9 +194,9 @@ body {
 .related-card {
     min-width: 0;
     overflow: hidden;
-    border: 1px solid #dfe2ef;
+    border: 1px solid var(--color-border);
     border-radius: 9px;
-    background: #ffffff;
+    background: var(--color-white);
 }
 
 .related-image {
@@ -206,7 +205,7 @@ body {
     justify-content: center;
     height: 125px;
     background: #c2c2c2;
-    color: #ffffff;
+    color: var(--color-white);
     text-decoration: none;
 }
 
@@ -236,7 +235,7 @@ body {
     min-width: 0;
     margin: 0;
     overflow: hidden;
-    color: #000b57;
+    color: var(--color-secondary);
     font-size: 12px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -244,13 +243,13 @@ body {
 
 .related-name-row i {
     flex-shrink: 0;
-    color: #fe1413;
+    color: var(--color-primary);
     font-size: 12px;
 }
 
 .related-information p {
     margin: 7px 0;
-    color: #fe1413;
+    color: var(--color-primary);
     font-size: 12px;
     font-weight: 800;
 }
@@ -261,15 +260,15 @@ body {
     justify-content: center;
     min-height: 28px;
     border-radius: 5px;
-    background: #000b57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
     font-size: 10px;
     font-weight: 700;
     text-decoration: none;
 }
 
 .related-detail-button:hover {
-    background: #fe1413;
+    background: var(--color-primary);
 }
 
 @media (max-width: 1024px) {

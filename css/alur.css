@@ -9,13 +9,12 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
 }
 
 .flow-section {
     width: 100%;
     min-height: 100vh;
-    background: #f1f2ff;
+    background: var(--color-page-background);
 }
 
 /* ==============================
@@ -24,12 +23,12 @@ body {
 
 .flow-hero {
     padding: 145px 0 30px;
-    color: #ffffff;
+    color: var(--color-white);
     background: linear-gradient(
         105deg,
-        #fe1413 0%,
-        #a20d3c 48%,
-        #000b57 100%
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 48%,
+        var(--color-secondary) 100%
     );
 }
 
@@ -49,7 +48,7 @@ body {
 .flow-hero p {
     max-width: 100%;
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
     text-align: justify;
@@ -62,7 +61,7 @@ body {
 .flow-content {
     min-height: 80vh;
     padding: 35px 0 45px;
-    background: #f1f2ff;
+    background: var(--color-page-background);
 }
 
 .flow-list {
@@ -82,7 +81,7 @@ body {
     min-height: 96px;
     padding: 15px 17px;
     border-radius: 10px;
-    background: #ffffff;
+    background: var(--color-white);
     box-shadow: 0 1px 1px rgba(0, 11, 87, 0.15);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -90,6 +89,27 @@ body {
 .flow-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 11, 87, 0.1);
+}
+
+.flow-qr {
+    width: 120px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.flow-qr img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.flow-qr span {
+    font-size: 11px;
+    color: #777;
 }
 
 /* Ikon */
@@ -102,8 +122,8 @@ body {
     width: 56px;
     height: 56px;
     border-radius: 9px;
-    background: #000b57;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
 }
 
 .flow-icon i {
@@ -122,8 +142,8 @@ body {
     margin-bottom: 5px;
     padding: 2px 9px;
     border-radius: 20px;
-    background: #fe1413;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -132,7 +152,7 @@ body {
 
 .flow-information h2 {
     margin: 0 0 3px;
-    color: #000b57;
+    color: var(--color-secondary);
     font-size: 18px;
     font-weight: 800;
 }
@@ -140,11 +160,100 @@ body {
 .flow-information p {
     margin: 0;
     color: #394b68;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.4;
 }
 
+/* ==============================
+   KRITERIA PRODUK
+============================== */
+
+.criteria-section {
+    width: 100%;
+    padding: 35px 0 40px;
+    box-sizing: border-box;
+
+    background: var(--color-page-background);
+}
+
+.criteria-container {
+    width: 88%;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background: linear-gradient(
+        105deg,
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 48%,
+        var(--color-secondary) 100%
+    );
+    border-radius: 12px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+/* HEADING */
+
+.criteria-heading {
+    margin-bottom: 18px;
+}
+
+.criteria-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    color: var(--color-white);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.criteria-heading h2 {
+    margin: 5px 0 0;
+    color: var(--color-white);
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* CARD LIST */
+
+.criteria-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+/* CARD */
+
+.criteria-card {
+    display: flex;
+    align-items: center;
+    min-height: 95px;
+    padding: 18px 20px;
+    background: var(--color-white);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.criteria-card:nth-child(odd) {
+    border-left-color: var(--color-secondary);
+}
+
+.criteria-card p {
+    margin: 0;
+    color: #10133a;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.criteria-card:hover {
+    transform: translateY(-5px);
+}
 /* ==============================
    RESPONSIVE TABLET
 ============================== */
@@ -186,11 +295,44 @@ body {
     }
 
     .flow-information h2 {
-        font-size: 11px;
+        font-size: 15px;
+        line-height: 1.35;
     }
 
     .flow-information p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .flow-label {
         font-size: 11px;
+    }
+
+    .criteria-section {
+        padding: 30px 0 35px;
+    }
+
+    .criteria-container {
+        width: 90%;
+        padding: 24px;
+    }
+
+    .criteria-heading h2 {
+        font-size: 32px;
+    }
+
+    .criteria-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .criteria-card {
+        min-height: 100px;
+        padding: 16px;
+    }
+
+    .criteria-card p {
+        font-size: 13px;
     }
 }
 
@@ -205,7 +347,7 @@ body {
     }
 
     .flow-hero {
-        padding: 20px 0 25px;
+        padding: 110px 0 25px;
     }
 
     .flow-hero h1 {
@@ -214,7 +356,7 @@ body {
     }
 
     .flow-hero p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .flow-content {
@@ -227,7 +369,9 @@ body {
 
     .flow-card {
         align-items: flex-start;
+        flex-wrap: wrap;
         gap: 11px;
+        min-height: 0;
         padding: 12px;
     }
 
@@ -242,17 +386,52 @@ body {
     }
 
     .flow-label {
-        font-size: 8px;
+        font-size: 9px;
         padding: 2px 7px;
     }
 
     .flow-information h2 {
-        font-size: 10px;
+        font-size: 14px;
         line-height: 1.4;
     }
 
     .flow-information p {
-        font-size: 10px;
+        font-size: 12px;
         line-height: 1.5;
+    }
+
+    .flow-qr {
+        flex: 0 0 100%;
+        width: 100%;
+        align-items: flex-start;
+        padding-left: 53px;
+    }
+
+    .flow-qr img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .criteria-section {
+        padding: 28px 0 32px;
+    }
+
+    .criteria-container {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .criteria-heading h2 {
+        font-size: 26px;
+    }
+
+    .criteria-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .criteria-card {
+        min-height: 0;
+        padding: 16px;
     }
 }

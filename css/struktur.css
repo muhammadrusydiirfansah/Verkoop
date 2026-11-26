@@ -11,7 +11,7 @@
     padding: 38px 0 65px;
     box-sizing: border-box;
 
-    background: #050d50;
+    background: var(--color-secondary);
     overflow: hidden;
 }
 
@@ -34,9 +34,9 @@
 }
 
 .structure-heading h2 {
-    color: #ffffff;
+    color: var(--color-white);
 
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 800;
 
     text-align: center;
@@ -45,7 +45,7 @@
 }
 
 .structure-heading p {
-    color: #ffffff;
+    color: var(--color-white);
 
     font-size: 14px;
     font-weight: 500;
@@ -74,7 +74,7 @@
     padding: 15px 20px 15px 25px;
     margin: 0 auto 44px;
 
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 12px;
 
     box-sizing: border-box;
@@ -93,7 +93,7 @@
     width: 7px;
     height: 100%;
 
-    background: #ff1717;
+    background: var(--color-primary);
 }
 
 /* Foto koordinator */
@@ -106,7 +106,7 @@
     overflow: hidden;
     border-radius: 12px;
 
-    background: #f0f2ff;
+    background: var(--color-page-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -128,7 +128,7 @@
 }
 
 .coordinator-info h3 {
-    color: #12345b;
+    color: var(--color-secondary);
 
     font-size: 21px;
     font-weight: 800;
@@ -137,7 +137,7 @@
 }
 
 .coordinator-info h4 {
-    color: #12345b;
+    color: var(--color-secondary);
 
     font-size: 14px;
     font-weight: 700;
@@ -146,7 +146,7 @@
 }
 
 .coordinator-info p {
-    color: #12345b;
+    color: var(--color-secondary);
 
     font-size: 13px;
     font-weight: 500;
@@ -180,7 +180,7 @@
 
     padding: 7px;
 
-    background: #12345b;
+    background: var(--color-secondary);
     border-radius: 12px;
 
     box-sizing: border-box;
@@ -196,7 +196,7 @@
     overflow: hidden;
     border-radius: 11px;
 
-    background: #f0f2ff;
+    background: var(--color-page-background);
 }
 
 .member-image img {
@@ -216,7 +216,7 @@
 }
 
 .member-info h3 {
-    color: #ffffff;
+    color: var(--color-white);
 
     font-size: 14px;
     font-weight: 800;
@@ -227,7 +227,7 @@
 }
 
 .member-info p {
-    color: #ffffff;
+    color: var(--color-white);
 
     font-size: 11px;
     font-weight: 400;
@@ -251,14 +251,14 @@
 
     padding: 12px 20px;
 
-    background: #ff1717;
+    background: var(--color-primary);
     border-radius: 12px;
 
     box-sizing: border-box;
 }
 
 .join-card h3 {
-    color: #ffffff;
+    color: var(--color-white);
 
     font-size: 15px;
     font-weight: 800;
@@ -275,8 +275,8 @@
 
     padding: 7px 10px;
 
-    background: #050d50;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: var(--color-white);
 
     border-radius: 6px;
 
@@ -289,8 +289,8 @@
 }
 
 .join-button:hover {
-    background: #ffffff;
-    color: #050d50;
+    background: var(--color-white);
+    color: var(--color-secondary);
 }
 
 /* =================================

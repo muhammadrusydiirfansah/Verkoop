@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+:root {
+    --color-primary: #fe1413;
+    --color-primary-dark: #a20d3c;
+    --color-secondary: #000b57;
+    --color-page-background: #f1f3ff;
+    --color-white: #ffffff;
+    --color-text: #222222;
+    --color-text-muted: #777b8c;
+    --color-border: #e4e6ef;
+}
+
+body,
+p,
+span,
+a,
+button,
+input,
+select,
+textarea,
+label,
+li,
+td,
+th,
+small {
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h1 *,
+h2 *,
+h3 * {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+h1,
+h1 * {
+    font-weight: 800;
+}
+
+h2,
+h2 *,
+h3,
+h3 * {
+    font-weight: 700;
+}
+
+.main-header .brand,
+.main-header .brand-name,
+.main-header .brand-tagline,
+.main-nav a,
+.main-footer .brand,
+.main-footer .brand-name,
+.main-footer .brand-tagline,
+.footer-navigation a,
+.footer-contact a,
+.footer-contact span {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+button,
+.product-pagination,
+.pagination-arrow,
+.pagination-number,
+.pagination-ellipsis,
+.hero-button,
+.category-more,
+.join-button,
+.partner-button,
+.detail-back,
+.related-heading a,
+.product-detail-button,
+.related-detail-button,
+.showcase-arrow,
+.showcase-badge,
+.hero-badges,
+.hero-badges span,
+.about-label,
+.flow-label,
+.partner-label,
+.detail-product-status,
+.product-search,
+.product-search input,
+.product-search input::placeholder,
+.product-filter,
+.product-filter select,
+.product-filter select option,
+.search-box,
+.search-box input,
+.search-box input::placeholder,
+.filter-box,
+.filter-box select,
+.filter-box select option,
+.category-heading h2,
+.category-title h3,
+.category-name,
+.category-more {
+    font-family: "Inter", Arial, sans-serif;
+}
+
+.bi,
+[class^="bi-"],
+[class*=" bi-"] {
+    font-family: "bootstrap-icons" !important;
+}

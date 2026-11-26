@@ -70,6 +70,47 @@ async function loadAdminLayout() {
             year: "numeric"
         }).format(new Date());
     }
+
+    const sidebar = document.querySelector(".sidebar");
+    const sidebarToggle = document.querySelector(".sidebar-toggle");
+
+    if (sidebar && sidebarToggle) {
+        const sidebarClose = sidebar.querySelector(".sidebar-close");
+        const backdrop = document.createElement("button");
+        backdrop.className = "sidebar-backdrop";
+        backdrop.type = "button";
+        backdrop.setAttribute("aria-label", "Tutup menu administrasi");
+        document.body.appendChild(backdrop);
+
+        const closeSidebar = () => {
+            document.body.classList.remove("sidebar-open");
+            sidebarToggle.setAttribute("aria-expanded", "false");
+            sidebarToggle.setAttribute("aria-label", "Buka menu administrasi");
+            sidebarToggle.querySelector("i").className = "bi bi-list";
+        };
+
+        sidebarToggle.addEventListener("click", () => {
+            const isOpen = document.body.classList.toggle("sidebar-open");
+            sidebarToggle.setAttribute("aria-expanded", String(isOpen));
+            sidebarToggle.setAttribute("aria-label", isOpen ? "Tutup menu administrasi" : "Buka menu administrasi");
+            sidebarToggle.querySelector("i").className = isOpen ? "bi bi-x-lg" : "bi bi-list";
+        });
+
+        sidebarClose.addEventListener("click", closeSidebar);
+        backdrop.addEventListener("click", closeSidebar);
+
+        sidebar.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeSidebar);
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeSidebar();
+        });
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) closeSidebar();
+        });
+    }
 }
 
 loadAdminLayout();

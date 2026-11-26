@@ -7,7 +7,7 @@
     padding: 35px 0 40px;
     box-sizing: border-box;
 
-    background: #f1f3ff;
+    background: var(--color-page-background);
 }
 
 /* Container */
@@ -22,9 +22,9 @@
 
     background: linear-gradient(
         105deg,
-        #ff1010 0%,
-        #a00b39 45%,
-        #050d50 100%
+        var(--color-primary) 0%,
+        var(--color-primary-dark) 45%,
+        var(--color-secondary) 100%
     );
 
     border-radius: 12px;
@@ -63,7 +63,7 @@
     padding: 3px 10px;
 
     background: rgba(255, 255, 255, 0.35);
-    color: #ffffff;
+    color: var(--color-white);
 
     border-radius: 20px;
 
@@ -76,7 +76,7 @@
 /* Heading */
 
 .partner-text h2 {
-    color: #ffffff;
+    color: var(--color-white);
 
     font-size: clamp(24px, 3.2vw, 34px);
     font-weight: 800;
@@ -89,9 +89,9 @@
 /* Description */
 
 .partner-text p {
-    max-width: 650px;
+    max-width: 900px;
 
-    color: #ffffff;
+    color: var(--color-white);
 
     font-size: 14px;
     font-weight: 600;
@@ -118,7 +118,7 @@
     gap: 8px;
 
     background: rgba(255, 255, 255, 0.28);
-    color: #ffffff;
+    color: var(--color-white);
 
     border-radius: 6px;
 
@@ -137,8 +137,8 @@
 }
 
 .partner-button:hover {
-    background: #ffffff;
-    color: #101b61;
+    background: var(--color-white);
+    color: var(--color-secondary);
 
     transform: translateY(-4px);
 }
